@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This is my first backend project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sushantraipuri123/Learning-Backend-NodeJS-.git"
+  },
+  "keywords": [
+    "backend",
+    "learning"
+  ],
+  "author": "Sushant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sushantraipuri123/Learning-Backend-NodeJS-/issues"
+  },
+  "homepage": "https://github.com/Sushantraipuri123/Learning-Backend-NodeJS-#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.3"
+  }
+}
