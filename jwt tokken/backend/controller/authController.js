@@ -16,6 +16,7 @@ module.exports = {
                 return ("Eamil exists")
             }
 
+            
             const hashpass = await bcrypt.hash(req.body.password, saltRounds)
 
             const user = await db.create({
@@ -37,5 +38,26 @@ module.exports = {
         } catch (error) {
             console.log(error)
         }
+    },
+
+    deleteUSer : async (req,res)=>{
+        try {
+      
+            const user = await db.deleteMany({
+                _id:req.body._id
+            })
+            res.status(200).json({
+                success:true,
+                status:200,
+                message:"User Created ",
+                body:user
+              })
+        } catch (error) {
+            console.log(error)
+        }
     }
 }
+
+
+
+
