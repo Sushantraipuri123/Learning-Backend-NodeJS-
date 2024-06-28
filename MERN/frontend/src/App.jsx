@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form"
 import './App.css'
 import axios from 'axios'
-
+import { NavLink } from 'react-router-dom';
 function App() {
   const {
     register,
@@ -63,6 +63,10 @@ function App() {
             Submit
           </button>
         </form>
+
+        <NavLink to="/content">
+        <button>Content</button>
+        </NavLink>
       </div>
     </>
   )
