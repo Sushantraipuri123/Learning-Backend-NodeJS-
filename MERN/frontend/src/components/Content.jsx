@@ -6,10 +6,10 @@ function Content() {
   const [content, setContent] = useState([]);
 
   useEffect(() => {
-    axios.get("/users/getUsers")
+    axios.get("http://localhost:5000/users/getUSers")
       .then((res) => {
         console.log({ res });
-        const jsonData = res.data;
+        const jsonData = res.data.body;
         setContent(jsonData);
         console.log(jsonData);
       })
@@ -24,7 +24,7 @@ function Content() {
     <div>
       <h1>This is content</h1>
       {content.map((item) => (
-        <div key={item.id}>{item.name}</div>
+        <div key={item.id}>{item.firstName}</div>
       ))}
     </div>
   );
