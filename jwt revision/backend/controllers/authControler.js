@@ -17,6 +17,7 @@ module.exports = {
                 address: req.body.address,
                 phone: req.body.phone,
                 password: hashpassword,
+                token: ''
             })
 
             var token = jwt.sign({ foo: 'bar' }, 'secretkey');
@@ -31,6 +32,20 @@ module.exports = {
               })
 
 
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
+    getUsers : async (req, res)=> {
+        try {
+            const users = await db.find({})
+            res.status(200).json({
+                success:true,
+                status:200,
+                message:"Users Fetched",
+                body:users
+            })
         } catch (error) {
             console.log(error);
         }
